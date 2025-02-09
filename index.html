@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+
+
+        }
+
+        header {
+            color: white;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: #1e90ff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 50px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+
+        header h1 {
+
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+            margin-top: -8px;
+            margin-left: -160px;
+            font-size: 1.9rem;
+            font-weight: bold;
+            text-shadow: 4px 4px 8px rgba(195, 219, 228, 0.7);
+
+        }
+
+        header h1:hover {
+
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            90% {
+                transform: translateY(-20px);
+            }
+        }
+
+        header h1 {
+
+            animation: bounce 0.3s ease-in-out 3;
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+        nav {
+            display: flex;
+            gap: 26px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 5px #A5C8D6, 0 0 10px #c9d5dd;
+            }
+
+            50% {
+                text-shadow: 0 0 20px #A5C8D6, 0 0 40px #c9d5dd;
+            }
+
+            100% {
+                text-shadow: 0 0 5px #A5C8D6, 0 0 10px #c9d5dd;
+            }
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            /* transition: color 0.3s;*/
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            animation: glow 1.5s infinite alternate;
+        }
+
+        .resume-btn {
+            margin-left: 90px;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 30px;
+            background: transparent;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .resume-btn:hover {
+            background-color: white;
+            color: #1e90ff;
+        }
+
+        .main-section {
+            color: white;
+            background: linear-gradient(180deg, #1e90ff, #1e90ff, #1B2631);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 110vh;
+            margin-top: 0px;
+
+        }
+
+        .main-section h2 {
+            margin-top: 160px;
+            font-size: 46px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            text-shadow:
+                2px 2px 5px rgba(0, 0, 0, 0.3),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.6),
+                inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+
+        }
+
+        .main-section p {
+            font-size: 1.16rem;
+            font-weight: 600;
+        }
+
+        .illustration {
+            margin-top: 70px;
+        }
+
+        .illustration img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: none;
+
+        }
+
+        /*  about section  */
+        #about {
+
+            padding: 20px;
+            margin: 20px;
+            border-radius: 12px;
+        }
+
+        #about h2 {
+            text-align: center;
+            font-size: 29px;
+            color: #1B2631;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            font-family: 'Roboto', sans-serif;
+            gap: 20px;
+            max-width: 1200px;
+            /* Limit the width for better readability */
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+
+        }
+
+        .about-photo {
+            margin-left: 50px;
+            width: 240px;
+            height: 320px;
+            border-radius: 6%;
+            object-fit: cover;
+            border: 2px solid #1B2631;
+        }
+
+        .about-description {
+
+            color: #333;
+            line-height: 1.2;
+            max-width: 690px;
+            font-size: 16px;
+
+
+        }
+
+        .about-description p {
+
+            margin-bottom: 10px;
+            /* Space between paragraphs */
+            text-align: justify;
+            /* Justify the text */
+        }
+
+        .resume {
+            margin: 60px 0px 10px 290px;
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: 2px solid #1B2631;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /*  Skills */
+
+        #skills h2 {
+            text-align: center;
+            font-size: 29px;
+            color: #1B2631;
+            margin-bottom: 20px;
+        }
+
+        .skills-description {
+            text-align: center;
+        }
+
+        .skills-carousel {
+            position: relative;
+            max-width: 1140px;
+            height: 300px;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-left: 40px;
+            margin-right: 20px;
+
+            transform-style: preserve-3d;
+            animation: rotateIcons 20s infinite linear;
+            /* 3D rotating animation */
+
+        }
+
+        .carousel-images {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 40px;
+            justify-items: center;
+            align-items: center;
+            margin-top: 50px;
+            transform-style: preserve-3d;
+
+        }
+
+        .skill-image {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            transform-origin: center center;
+            /* Rotate around the center */
+            transform-origin: center center;
+            /* Rotate around the center */
+            animation: rotate 4s infinite linear;
+            /* Rotate each icon in place */
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);/
+            }
+        }
+
+
+
+        /* Projects */
+        .container {
+            max-width: 1140px;
+            margin: 0px 10px 0px 40px;
+            border-radius: 8px;
+            padding: 50px 20px;
+            background-color: #f8f8f8;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #projects h2 {
+
+            font-size: 29px;
+            color: #1B2631;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 60px;
+            margin-bottom: 30px;
+        }
+
+        .project-grid {
+            display: flex;
+            flex-direction: column;
+            /* Stack the cards vertically */
+            gap: 20px;
+            /* Space between project cards */
+            justify-items: center;
+            align-items: center;
+            /* Center the content horizontally */
+        }
+
+        .project-card {
+
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            width: 80%;
+            /* Set a width for each card */
+            margin-left: auto;
+            /* Center horizontally */
+            margin-right: auto;
+            /* Center horizontally */
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            /* Lift the card when hovered */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            /* Make sure the image fits within the bounds */
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            /* Space between buttons */
+            margin-top: 10px;
+        }
+
+        .btn {
+
+
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: 2px solid #1B2631;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .github-btn {
+            background-color: #1e90ff;
+            color: white;
+        }
+
+        .github-btn:hover {
+            background-color: #1e90ff;
+        }
+
+        .live-btn {
+            background-color: #cde5fd;
+            color: rgb(58, 57, 57);
+        }
+
+        .live-btn:hover {
+            background-color: #cde5fd;
+            color: rgb(58, 57, 57);
+        }
+
+        /* contact */
+        #contact .container {
+            padding: 50px 20px;
+            background-color: #f8f8f8;
+            margin-top: 20px;
+            border-radius: 8px;
+            font-family: 'Roboto', sans-serif;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact h2 {
+            font-size: 29px;
+            color: #1B2631;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            margin-top: 60px;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 0 auto;
+
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info p {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-info a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-details {
+            margin-top: 20px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-icon img {
+            display: inline-block;
+
+            width: 36px;
+            height: 36px;
+            padding: 10px 20px;
+            border-radius: 40%;
+            margin-right: 10px;
+
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icon img:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#statistics">Statistics</a>
+            <a href="#contact">Contact</a>
+            <a href="https://drive.google.com/file/d/17vR_tUofktlmozU_6akmtpI68znAOwSB/view?usp=sharing"><button
+                    class="resume-btn">Resume</button></a>
+
+        </nav>
+    </header>
+
+    <div class="main-section" id:"home">
+        <h2>Hi, I'm Mayuri Shinde</h2>
+        <p style="margin: -40px 0px;">A Full Stack Developer</p>
+        <!-- <p style="font-size: 0.8rem; color:#ddd9d9;margin-top:42px">Passionate About Building Scalable Websites</p> -->
+        <!-- <h1 style="color: #3F4E4F;">Hello, I'm <span style="color: #64d1d3;">Mayuri Shinde</span></h1> -->
+        <div class="illustration">
+            <img src="./asset/666.jpg" alt="Developer Illustration">
+        </div>
+
+
+    </div>
+
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="./asset/IMG-20250208-WA0008[1].jpg" alt="Mayuri Shinde" class="about-photo">
+            <div class="about-description">
+                <p>A Passionate and Enthusiastic full-stack developer with a deep interest in building
+                    innovative solutions. I have experience working with various technologies including
+                    JavaScript, React, Node.js, Express.js, MongoDB etc. I love creating dynamic, user-friendly websites
+                    and
+                    applications that solve real-world problems. Outside of coding, I enjoy reading about new
+                    tech trends, playing chess, and learning new languages. I always keep a growth mindset and eager
+                    to expand my skill set.</p>
+                <a href="https://drive.google.com/file/d/17vR_tUofktlmozU_6akmtpI68znAOwSB/view?usp=sharing"><button
+                        class="resume">Resume</button></a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-description">
+            <p>Here are some of the tools and technologies I work with:</p>
+            <div class="skills-carousel">
+                <div class="carousel-images">
+                    <img src="./asset/888859.png" alt="Tech 1" class="skill-image">
+                    <img src="./asset/css.png" alt="Tech 2" class="skill-image">
+                    <img src="./asset/js.png" alt="Tech 1" class="skill-image">
+                    <img src="./asset/node.png" alt="Tech 2" class="skill-image">
+                    <img src="./asset/mongo.jpg" alt="Tech 1" class="skill-image">
+                    <img src="./asset/git.png" alt="Tech 2" class="skill-image">
+                    <img src="./asset/postman.png" alt="Tech 1" class="skill-image">
+                    <img src="./asset/aws.png" alt="Tech 2" class="skill-image">
+                    <img src="./asset/netlify.jpg" alt="Tech 1" class="skill-image">
+                    <img src="./asset/vscode.jpg" alt="Tech 2" class="skill-image">
+                    <img src="./asset/sql.png" alt="Tech 1" class="skill-image">
+                    <img src="./asset/render.png" alt="Tech 2" class="skill-image">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="container">
+
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="./asset/Screenshot 2025-02-07 183600.png" alt="Project 1">
+                    <h3>Job Portal Website</h3>
+                    <p>A full-fledged job listing and application platform.</p>
+                    <div class="button-container">
+                        <a href="https://github.com/MayuriShinde/job-portal" target="_blank"
+                            class="btn github-btn">GitHub</a>
+                        <a href="https://your-live-project-link.com" target="_blank" class="btn live-btn">Live</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="images/project1.jpg" alt="Project 1">
+                    <h3>Job Portal Website</h3>
+                    <p>A full-fledged job listing and application platform.</p>
+                    <div class="button-container">
+                        <a href="https://github.com/MayuriShinde/job-portal" target="_blank"
+                            class="btn github-btn">GitHub</a>
+                        <a href="https://your-live-project-link.com" target="_blank" class="btn live-btn">Live</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="images/project1.jpg" alt="Project 1">
+                    <h3>Job Portal Website</h3>
+                    <p>A full-fledged job listing and application platform.</p>
+                    <div class="button-container">
+                        <a href="https://github.com/MayuriShinde/job-portal" target="_blank"
+                            class="btn github-btn">GitHub</a>
+                        <a href="https://your-live-project-link.com" target="_blank" class="btn live-btn">Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="container">
+
+            <div class="contact-info">
+                <p>If you would like to get in touch, feel free to reach out via email or connect with me.</p>
+                <div class="contact-details">
+
+                    <p>
+                        📩 Email: <a href="mailto:mayurishinde24304@gmail.com">mayurishinde24304@gmail.com</a>
+                    </p>
+
+                    <p>📞 Phone: <a href="tel:+917040070061">+91 7040070061</a></p>
+
+
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/369-mayuri-shinde/" target="_blank"
+                            class="social-icon"><img
+                                src="https://cdn-icons-png.freepik.com/256/2504/2504923.png?ga=GA1.1.1050442570.1738935054&semt=ais_hybrid"
+                                alt="linkedin"></a>
+                        <a href="https://github.com/MAYURIRAMNATHSHINDE" target="_blank" class="social-icon"><img
+                                src="https://cdn-icons-png.freepik.com/256/3291/3291695.png?ga=GA1.1.1050442570.1738935054&semt=ais_hybrid"
+                                alt="github image"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>
