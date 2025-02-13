@@ -894,14 +894,7 @@
                 margin: auto;
 
             }
-            .project-card {
-                width: 80%; /* Use almost full screen width */
-                max-width: 100%; /* Allows flexibility */
-            }
-        
-            .project-card img {
-                width: 60%; /* Ensures the image scales properly */
-            }
+          
             
             
             
@@ -932,14 +925,7 @@
                 margin: auto;
 
             }
-            .project-card {
-                width: 60%; /* Allows some margin on small screens */
-                max-width: 80%; /* Ensures flexibility */
-            }
-        
-            .project-card img {
-                width: 80%; /* Makes the image fill the card */
-            }
+            
             
             .cal {
                 width: 60%;
@@ -947,21 +933,7 @@
                 
             }
         }
-        @media (min-width: 300px)  {
-            .project-card img{
-                width: 0%; /* Almost full screen width for ultra-small devices */
-            }
-        }
-        @media (min-width: 500px)  {
-            .project-card {
-                width: 0%; /* Allows some margin on small screens */
-                max-width: 80%; /* Ensures flexibility */
-            }
-        
-            .project-card img {
-                width: 0%; /* Makes the image fill the card */
-            }
-        }
+      
         /* Statistics */
         .cal {
             padding: 20px 60px 20px 35px;
@@ -1012,7 +984,7 @@
 
 <body>
 
-    <header class="navbar">
+    <header class="navbar" id="home">
         <div class="logo">Portfolio</div>
 
         <div class="hamburger" onclick="toggleMenu()">
