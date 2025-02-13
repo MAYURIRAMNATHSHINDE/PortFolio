@@ -717,6 +717,13 @@
                 background-color: #F9F9F9;
                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             }
+            .project-card img {
+                width: 90%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-bottom: 15px;
+            }
 
         }
 
@@ -812,9 +819,20 @@
                 margin: auto;
 
             }
+            /*.project-card img {
+                width: 40%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-bottom: 15px;
+            }*/
+            .project-card {
+                width: 90%; /* Adjust width for smaller screens */
+                max-width: 90%; /* Allow it to take full width if needed */
+            }
 
             .cal {
-                width: 80%;
+                width: 70%;
                 padding: 20px 50px 20px 30px;
                 margin: auto;
                 border-radius: 12px;
@@ -876,6 +894,23 @@
                 margin: auto;
 
             }
+            .project-card {
+                width: 80%; /* Use almost full screen width */
+                max-width: 100%; /* Allows flexibility */
+            }
+        
+            .project-card img {
+                width: 60%; /* Ensures the image scales properly */
+            }
+            
+            
+            
+            
+            .cal {
+                width: 60%;
+                padding: 20px 50px 20px 30px;
+                
+            }
 
         }
 
@@ -897,8 +932,36 @@
                 margin: auto;
 
             }
+            .project-card {
+                width: 60%; /* Allows some margin on small screens */
+                max-width: 80%; /* Ensures flexibility */
+            }
+        
+            .project-card img {
+                width: 80%; /* Makes the image fill the card */
+            }
+            
+            .cal {
+                width: 60%;
+                padding: 20px 50px 20px 30px;
+                
+            }
         }
-
+        @media (min-width: 300px)  {
+            .project-card img{
+                width: 0%; /* Almost full screen width for ultra-small devices */
+            }
+        }
+        @media (min-width: 500px)  {
+            .project-card {
+                width: 0%; /* Allows some margin on small screens */
+                max-width: 80%; /* Ensures flexibility */
+            }
+        
+            .project-card img {
+                width: 0%; /* Makes the image fill the card */
+            }
+        }
         /* Statistics */
         .cal {
             padding: 20px 60px 20px 35px;
