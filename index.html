@@ -363,7 +363,7 @@
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
-            padding: 20px;
+            padding: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
@@ -380,23 +380,27 @@
 
         .project-card img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: 500px;
+            object-fit: contain;
             border-radius: 8px;
-            margin-bottom: 15px;
+            margin-bottom: 2px;
         }
+
 
         .project-card h3 {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
+            color: #0f382e;
+            padding: 10px;
+            margin-top: -30px;
         }
 
         .project-card p {
-            font-size: 1rem;
+            padding: 20px;
+            font-size: 0.8rem;
             color: #666;
             margin-bottom: 15px;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         .button-container {
@@ -423,20 +427,30 @@
         .github-btn {
             background-color: #1e90ff;
             color: white;
+            margin-bottom: 20px;
         }
 
         .github-btn:hover {
             background-color: #1e90ff;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            color: rgb(58, 57, 57);
         }
 
         .live-btn {
+            margin-bottom: 20px;
             background-color: #cde5fd;
             color: rgb(58, 57, 57);
         }
 
         .live-btn:hover {
-            background-color: #cde5fd;
-            color: rgb(58, 57, 57);
+
+            background-color: #1e90ff;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+
         }
 
         /* contact */
@@ -499,11 +513,12 @@
         }
 
         .social-links img {
-            width: 30px; /* Adjust as needed */
+            width: 30px;
+            /* Adjust as needed */
             height: auto;
 
         }
-        
+
 
         .social-icon img:hover {
             transform: scale(1.1);
@@ -715,6 +730,7 @@
                 background-color: #F9F9F9;
                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             }
+
             .project-card img {
                 width: 90%;
                 height: 200px;
@@ -817,6 +833,7 @@
                 margin: auto;
 
             }
+
             /*.project-card img {
                 width: 40%;
                 height: 200px;
@@ -825,8 +842,21 @@
                 margin-bottom: 15px;
             }*/
             .project-card {
-                width: 90%; /* Adjust width for smaller screens */
-                max-width: 90%; /* Allow it to take full width if needed */
+                width: 90%;
+                /* Adjust width for smaller screens */
+                max-width: 90%;
+                /* Allow it to take full width if needed */
+            }
+            .project-card img {
+                width: 90%;
+                height: 460px;
+                object-fit: contain;
+                border-radius: 8px;
+                margin-bottom: 2px;
+            }
+            .project-card {
+                padding: auto;
+                margin: auto;
             }
 
             .cal {
@@ -892,12 +922,37 @@
                 margin: auto;
 
             }
-          
-    
+            .project-card img {
+                margin-top: -160px;
+                width: 80%;
+                height: 450px;
+                object-fit: contain;
+                border-radius: 8px;
+                margin-bottom: 2px;
+            }
+            .project-card h3 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #0f382e;
+                margin-top: -190px;
+                margin-bottom: 0px;
+            }
+            .project-card p {
+                
+                margin-top: -10px;
+               
+            }
+            .project-card {
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+                margin-bottom: 0%;
+            }
+
             .cal {
                 width: 60%;
                 padding: 20px 50px 20px 30px;
-                
+
             }
 
         }
@@ -915,20 +970,32 @@
                 margin: auto;
                 max-width: 300px;
             }
+            .project-card img {
+                width: 70%;
+                height: 500px;
+                object-fit: contain;
+                border-radius: 8px;
+                margin-bottom: 2px;
+            }
+            .project-card {
+                padding: 0px;
+                margin: 0px;
+                margin-bottom: 0%;
+            }
 
             .resume {
                 margin: auto;
 
             }
-            
-            
+
+
             .cal {
                 width: 60%;
                 padding: 20px 50px 20px 30px;
-                
+
             }
         }
-      
+
         /* Statistics */
         .cal {
             padding: 20px 60px 20px 35px;
@@ -1062,39 +1129,42 @@
             <div class="project-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
-                    <img src="./asset/Screenshot 2025-02-07 183600.png" alt="Project 1">
-                    <h3>Job Portal Website</h3>
-                    <p>A full-fledged job listing and application platform.</p>
+                    <img src="./asset/project-photo.png" alt="Project 1">
+                    <h3>Ecommerce Website</h3>
+                    <p>✅ Add/remove items from the cart (stored in localStorage)
+
+                        ✅ Secure checkout via Stripe Payment Gateway
+
+                        ✅ Responsive design for mobile & desktop
+
+                        ✅ Order confirmation page (Success & Cancel pages)
+
+                        ✅ Simple backend with Express.js for handling payments</p>
                     <div class="button-container">
-                        <a href="https://github.com/MayuriShinde/job-portal" target="_blank"
+                        <a href="https://github.com/MAYURIRAMNATHSHINDE/Ecommerce" target="_blank"
                             class="btn github-btn">GitHub</a>
-                        <a href="https://your-live-project-link.com" target="_blank" class="btn live-btn">Live</a>
+                        <a href="https://ecommerce-6ecq.onrender.com/" target="_blank" class="btn live-btn">Live</a>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <img src="./asset/Screenshot 2025-02-07 183600.png" alt="Project 1">
-                    <h3>Job Portal Website</h3>
-                    <p>A full-fledged job listing and application platform.</p>
+                    <img src="./asset/project-screenshot-1.png" alt="Project 1">
+                    <h3>Student Management System</h3>
+                    <p>
+                        ✅ Real-Time CRUD Operations: Supports Create, Read, Update, and Delete functionalities through
+                        an efficient backend API built with Node.js and MongoDB.
+                        ✅ User-Friendly Interface: Provides an intuitive frontend for seamless navigation and data
+                        management.
+                        ✅ Student Data Display: Displays student details and academic progress in an easy-to-view
+                        format.</p>
                     <div class="button-container">
-                        <a href="https://github.com/MayuriShinde/job-portal" target="_blank"
-                            class="btn github-btn">GitHub</a>
-                        <a href="https://your-live-project-link.com" target="_blank" class="btn live-btn">Live</a>
+                        <a href="" target="_blank" class="btn github-btn">GitHub</a>
+                        <a href="" target="_blank" class="btn live-btn">Live</a>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <img src="./asset/Screenshot 2025-02-07 183600.png" alt="Project 1">
-                    <h3>Job Portal Website</h3>
-                    <p>A full-fledged job listing and application platform.</p>
-                    <div class="button-container">
-                        <a href="https://github.com/MayuriShinde/job-portal" target="_blank"
-                            class="btn github-btn">GitHub</a>
-                        <a href="https://your-live-project-link.com" target="_blank" class="btn live-btn">Live</a>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -1126,15 +1196,11 @@
 
 
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/369-mayuri-shinde/" target="_blank"
-                            class="social-icon">
-                            <img
-                                src="./asset/linkedin-image.png"
-                                alt="linkedin"></a>
+                        <a href="https://www.linkedin.com/in/369-mayuri-shinde/" target="_blank" class="social-icon">
+                            <img src="./asset/linkedin-image.png" alt="linkedin"></a>
 
                         <a href="https://github.com/MAYURIRAMNATHSHINDE" target="_blank" class="social-icon"><img
-                                src="./asset/github-icon.png"
-                                alt="github image"></a>
+                                src="./asset/github-icon.png" alt="github image"></a>
 
                     </div>
                 </div>
