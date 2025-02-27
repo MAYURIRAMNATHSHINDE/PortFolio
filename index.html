@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="icon" type="image/png" href="/PortFolio/asset/searching.png">
+    <link rel="icon" type="image/png" href="./asset/searching.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -135,14 +135,14 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            height: 110vh;
+            height: 100vh;
             margin-top: 0px;
 
         }
 
         .main-section h2 {
             margin-top: 160px;
-            font-size: 46px;
+            font-size: 45px;
             font-weight: bold;
             font-family: 'Poppins', sans-serif;
             text-align: center;
@@ -178,10 +178,13 @@
             border-radius: 12px;
         }
 
+
         #about h2 {
             text-align: center;
             font-size: 29px;
             color: #1B2631;
+            margin-top: 30px;
+            margin-bottom: 20px;
         }
 
         .about-content {
@@ -346,8 +349,8 @@
             color: #1B2631;
             text-align: center;
             font-family: 'Roboto', sans-serif;
-            margin-top: 60px;
-            margin-bottom: 30px;
+            margin-top: 30px;
+            margin-bottom: 20px;
         }
 
         .project-grid {
@@ -455,17 +458,17 @@
 
         /* contact */
         #contact .container {
-            padding: 50px 20px;
+            padding: 40px;
             background-color: #F9F9F9;
-            margin-top: 20px;
+            margin: 20px auto;
             border-radius: 8px;
             font-family: 'Roboto', sans-serif;
-            width: 90%;
-            margin-left: 50px;
-            margin-right: 65px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 95%;
+            max-width: 1050px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         }
+
 
         #contact h2 {
             font-size: 29px;
@@ -482,7 +485,7 @@
 
             background-color: #fff;
             border-radius: 8px;
-            padding: 30px;
+            padding: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -530,48 +533,339 @@
 
         @media (max-width: 1200px) {
             .resume-btn {
-                margin-left: 0px;
+                margin-left: 0;
             }
 
             header h1 {
-
                 margin-left: -30px;
             }
 
             .cal {
+                width: 90%;
+                padding: 20px 30px;
+                margin: auto;
+                border-radius: 12px;
+                background-color: #F9F9F9;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
+            }
+
+            .project-card img {
+                width: 90%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 8px;
+                margin-bottom: 15px;
+            }.project-card h3 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #0f382e;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                width: 100%;
+            }
+           
+            header {
+                flex-direction: column;
+                align-items: center;
+                padding: 15px 20px;
+                box-shadow: none;
+
+            }
+
+            .logo h1 {
+                font-size: 1.6rem;
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+
+            nav {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+          
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: rgba(30, 144, 255, 0.9);
+                width: 100%;
+                padding: 0px 0;
+                text-align: center;
+
+                /* Hide menu initially */
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+            }
+
+            /* When active, show menu */
+            .nav-links.active {
+                max-height: 350px;
+                /* Adjust height based on menu items */
+                padding: 2px 0;
+            }
+
+
+.skills-carousel{
+    height: auto;
+}
+            .carousel-images {
+             height: fit-content;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                justify-items: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+            .carousel-images img{
+               width: 45px;
+               height: 45px;
+               margin-bottom: 10px;
+            }
+
+            .project-card {
+                width: 100%;
+                padding: 10px;
                 margin: auto;
             }
 
-
-
-        }
-
-        @media (min-width: 320px) and (max-width: 768px) {
-            .resume-btn {
-                padding: 10px 20px;
-                font-size: 14px;
+            .cal {
+                width: 80%;
+                padding: 20px;
             }
 
-            header h1 {
-                font-size: 22px;
+            .nav-links:hover {
+                color: #1B2631;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex !important;
+                z-index: 1000;
+            }
+
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+                top: 15px;
+                z-index: 10;
+            }
+
+            .hamburger span {
+                width: 30px;
+                height: 3px;
+                background: white;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+
+            /* Animate Hamburger into X */
+            .hamburger.open span:nth-child(1) {
+                transform: translateY(20px) rotate(45deg);
+            }
+
+            .hamburger.open span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.open span:nth-child(3) {
+                transform: translateY(-18px) rotate(-45deg);
             }
 
             .main-section {
-                max-width: 100%;
+                color: white;
+                background: linear-gradient(180deg, #1e90ff, #1e90ff, #1B2631);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                height: 90vh;
+                margin-top: 0px;
+    
+            }
+    
+            .main-section h2 {
+                margin-top: 130px;
+                font-size: 43px;
+    
+            }
+        
+        }
+
+        @media (max-width: 480px) {
+            .logo h1 {
+                font-size: 1.4rem;
+                margin-left: 0;
             }
 
+            nav a {
+                font-size: 1rem;
+                margin: 5px 0;
+            }
+
+            .resume-btn {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .about-photo {
+                width: 150px;
+                height: 200px;
+            }
+
+            .about-description {
+                font-size: 13px;
+            }
+
+            .project-card img {
+                width: 80%;
+                height: auto;
+                object-fit: contain;
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+
+            .project-card h3 {
+                margin-top: 6px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #0f382e;
+            }
+
+            .project-card p {
+                font-size: 14px;
+            }
+
+            .contact-info {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .social-icon img {
+                width: 25px;
+                height: 25px;
+            }
+
+            .cal {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .about-photo {
+                margin: 0 auto;
+            }
             .carousel-images {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 30px;
-                justify-items: center;
-                align-items: center;
-                margin-top: 50px;
-                transform-style: preserve-3d;
+                grid-template-columns: repeat(2, 1fr); /* 3 columns */
+                gap: 15px;
+            }
+            .container {
+                width: 90%; /* Adjust width */
+                padding: 15px;
+            }
+        
+            .contact-info p {
+                font-size: 1rem;
+            }
+        
+            .contact-details {
+                font-size: 0.9rem;
+            }
+        
+            .social-links {
+                gap: 10px;
+            }
+        
+            .social-icon img {
+                width: 35px;
+                height: 35px;
+            }
+            .contact-details p a{
+               
+                font-size: 10px;
+                padding-right: 6px;
+            }
+        }
 
+        @media (max-width: 360px) {
+            .about-description {
+                width: 100%;
+                text-align: center;
             }
 
+            .about-description p {
+                max-width: 300px;
+                margin: auto;
+            }
+
+            .project-card img {
+                width: 70%;
+                height: auto;
+            }
+
+            .cal {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .about-photo {
+                margin: 0 auto;
+            }
+            .carousel-images {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* 3 columns */
+                gap: 15px;
+            }
+            .contact-info p {
+                font-size: 0.9rem;
+            }
+        
+            .contact-details p a{
+             
+                font-size: 9.5px;
+                padding-right: 6px;
+            }
+        
+            .social-links {
+                gap: 8px;
+
+            }
+        
+            .social-icon img {
+                width: 30px;
+                height: 30px;
+            }
         }
+
 
 
 
@@ -618,410 +912,79 @@
             cursor: pointer;
         }
 
+
         /* Hamburger icon lines */
-        .hamburger div {
+        /*.hamburger div {
             width: 25px;
             height: 3px;
             background-color: black;
             margin: 5px 0;
             transition: all 0.3s ease;
-        }
+        }*/
 
-        /* Hide hamburger icon by default */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
 
-        /* Hamburger icon lines */
-        .hamburger div {
+
+        .hamburger span {
             width: 25px;
             height: 3px;
-            background-color: black;
+            background: white;
             margin: 5px 0;
-            transition: all 0.3s ease;
-        }
-
-        /* Add a background or border for debugging */
-        .nav-links.active {
-            color: #1e90ff;
-            display: flex;
-            border: 2px solid #1B2631;
-            background-color: rgb(41, 71, 83, 0.6);
-            /* Dark background */
-
+            transition: 0.3s;
         }
 
 
-        /* Responsive: Show Hamburger & Hide Links */
-        @media (max-width: 420px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background: white;
-                text-align: center;
-                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-                padding: 15px 0;
-            }
 
-            .nav-links.active {
-                display: flex;
-                /* Show menu when active */
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .carousel-images {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-                justify-items: center;
-                align-items: center;
-                margin-top: 50px;
-                transform-style: preserve-3d;
-
-            }
-        }
-
-        /*//////////////////////////////////////////////////////*/
-
-        /* Responsive Navbar */
-        @media (max-width: 1200px) {
-            header {
-                padding: 20px 30px;
-            }
-
-            .logo h1 {
-                font-size: 1.5rem;
-                margin-left: -40px;
-            }
-
-            nav {
-                margin-left: 50px;
-            }
-
-            nav a {
-                font-size: 1rem;
-            }
-
-            .resume-btn {
-                padding: 8px 18px;
-                margin-left: 0;
-                font-size: 14px;
-            }
-
-            .resume {
-                margin: auto;
-
-            }
-
-            .cal {
-                width: 90%;
-                padding: 20px 50px 20px 30px;
-                margin: auto;
-                border-radius: 12px;
-                background-color: #F9F9F9;
-                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            }
-
-            .project-card img {
-                width: 90%;
-                height: 200px;
-                object-fit: cover;
-                border-radius: 8px;
-                margin-bottom: 15px;
-            }
-
-        }
-
-        /* Mobile-specific adjustments */
-        @media (max-width: 768px) {
-            body {
-                width: 100%;
-            }
-
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 15px 25px;
-                box-shadow: none;
-            }
-
-            .logo h1 {
-                font-size: 1.6rem;
-                margin-left: 0;
-                margin-bottom: 10px;
-            }
-
-            nav {
-                display: block;
-                width: 100%;
-                text-align: center;
-                margin-top: 10px;
-            }
-
-            nav a {
-                display: block;
-                margin: 10px 0;
-                font-size: 1.1rem;
-            }
-
-            .main-section {
-                height: auto;
-                padding: 60px 20px;
-            }
-
-            .main-section h2 {
-                font-size: 2.5rem;
-                margin-top: 80px;
-            }
-
-            .illustration img {
-                width: 180px;
-                height: 180px;
-            }
-
-            #about .about-content {
-                flex-direction: column;
-                text-align: center;
-                padding: 10px;
-            }
-
-            .about-photo {
-                width: 180px;
-                height: 240px;
-            }
-
-            .about-description {
-                font-size: 14px;
-                padding: auto;
-            }
-
-            #skills .skills-carousel {
-                max-width: 100%;
-                height: auto;
-                padding: 10px;
-            }
-
-            .project-grid {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .project-card {
-                width: 90%;
-            }
-
-            .contact-info {
-                padding: 20px;
-                width: 90%;
-            }
-
-            .social-icon img {
-                width: 30px;
-                height: 30px;
-            }
-
-            .resume {
-                margin: auto;
-
-            }
-
-            /*.project-card img {
-                width: 40%;
-                height: 200px;
-                object-fit: cover;
-                border-radius: 8px;
-                margin-bottom: 15px;
-            }*/
-            .project-card {
-                width: 90%;
-                /* Adjust width for smaller screens */
-                max-width: 90%;
-                /* Allow it to take full width if needed */
-            }
-            .project-card img {
-                width: 90%;
-                height: 460px;
-                object-fit: contain;
-                border-radius: 8px;
-                margin-bottom: 2px;
-            }
-            .project-card {
-                padding: auto;
-                margin: auto;
-            }
-
-            .cal {
-                width: 70%;
-                padding: 20px 50px 20px 30px;
-                margin: auto;
-                border-radius: 12px;
-                background-color: #F9F9F9;
-                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            }
-        }
-
-        /* Extra Small devices (Mobile Phones) */
-        @media (max-width: 480px) {
-            .logo h1 {
-                font-size: 1.4rem;
-                margin-left: 0;
-            }
-
-            nav a {
-                font-size: 1rem;
-                margin: 5px 0;
-            }
-
-            .main-section h2 {
-                font-size: 2rem;
-                margin-top: 60px;
-            }
-
-            .resume-btn {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-
-            .about-photo {
-                width: 150px;
-                height: 200px;
-            }
-
-            .about-description {
-                font-size: 13px;
-                padding: auto;
-            }
-
-            .project-card {
-                width: 100%;
-            }
-
-            .contact-info p {
-                font-size: 14px;
-            }
-
-            .social-icon img {
-                width: 25px;
-                height: 25px;
-            }
-
-            .about-description p {
-                max-width: 390px;
-            }
-
-            .resume {
-                margin: auto;
-
-            }
-            .project-card img {
-                margin-top: -160px;
-                width: 80%;
-                height: 450px;
-                object-fit: contain;
-                border-radius: 8px;
-                margin-bottom: 2px;
-            }
-            .project-card h3 {
-                font-size: 1.5rem;
-                font-weight: bold;
-                color: #0f382e;
-                margin-top: -190px;
-                margin-bottom: 0px;
-            }
-            .project-card p {
-                
-                margin-top: -10px;
-               
-            }
-            .project-card {
-                width: 100%;
-                padding: 0px;
-                margin: 0px;
-                margin-bottom: 0%;
-            }
-
-            .cal {
-                width: 60%;
-                padding: 20px 50px 20px 30px;
-
-            }
-
-        }
-
-        @media ((min-width: 300px) and (max-width: 500px)) {
-            .about-description {
-                width: 100%;
-                padding: auto;
-            }
-
-            .about-description p {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: auto;
-                max-width: 300px;
-            }
-            .project-card img {
-                width: 70%;
-                height: 500px;
-                object-fit: contain;
-                border-radius: 8px;
-                margin-bottom: 2px;
-            }
-            .project-card {
-                padding: 0px;
-                margin: 0px;
-                margin-bottom: 0%;
-            }
-
-            .resume {
-                margin: auto;
-
-            }
-
-
-            .cal {
-                width: 60%;
-                padding: 20px 50px 20px 30px;
-
-            }
-        }
-
-        /* Statistics */
-        .cal {
-            padding: 20px 60px 20px 35px;
-            margin: 0px 75px 10px 49px;
-            border-radius: 12px;
-            background-color: #F9F9F9;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-        }
-
-
+        /* Centering the Statistics heading */
         #statisctics {
-
             font-size: 29px;
             color: #1B2631;
             text-align: center;
             font-family: 'Roboto', sans-serif;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            margin: 30px auto;
+            /* Centering */
+            width: 100%;
+            /* Ensures it spans the full width */
+        }
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
+        /* Centering the Statistics container */
+        .cal {
+            width: 77%;
+            max-width: 1150px;
+            /* Restrict max width */
+            padding: 20px 60px 20px 45px;
+            margin: 10px auto;
+            /* Centers the div horizontally */
+            border-radius: 12px;
+            background-color: #F9F9F9;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            text-align: center;
+            /* Ensures text inside is also centered */
         }
 
 
+        /*/////////////////////////////////////////////////////////////////*/
+
+        /* Center all sections except header and main */
+        .center-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Ensure each section is centered */
+        #about,
+        #skills,
+        #projects,
+        #statisctics,
+        #contact {
+            width: 80%;
+            /* Adjust as needed */
+            max-width: 1150px;
+            margin: auto;
+            /* Centers the section */
+        }
 
         /*//////////////////////////////////////////*/
     </style>
@@ -1034,10 +997,32 @@
             GitHubCalendar(".calendar", "MAYURIRAMNATHSHINDE", { responsive: true });
         });
 
+
         function toggleMenu() {
-            console.log("Hamburger clicked"); // Debugging line
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
+            let navLinks = document.querySelector(".nav-links");
+            let hamburger = document.querySelector(".hamburger");
+
+            navLinks.classList.toggle("active");
+            hamburger.classList.toggle("open");
+        }
+
+        // Close menu when clicking a link (better UX)
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                document.querySelector(".nav-links").classList.remove("active");
+                document.querySelector(".hamburger").classList.remove("open");
+            });
+        });
+
+
+        function downloadResume() {
+            // Open the file in a new tab
+            window.open("https://drive.google.com/file/d/1czKnTnUtgz3A5L5Ca0hIy8D2ch_6yY0l/view?usp=sharing", "_blank");
+
+            // Trigger direct download
+            setTimeout(() => {
+                window.location.href = "https://drive.google.com/uc?export=download&id=1czKnTnUtgz3A5L5Ca0hIy8D2ch_6yY0l";
+            }, 1000); // 1-second delay ensures the new tab opens first
         }
 
     </script>
@@ -1048,12 +1033,16 @@
 
     <header class="navbar" id="home">
         <div class="logo">Portfolio</div>
-
         <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
+        <!-- <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div> -->
 
         <nav class="nav-links">
             <a href="#home">Home</a>
@@ -1062,12 +1051,15 @@
             <a href="#projects">Projects</a>
             <a href="#statisctics">Statistics</a>
             <a href="#contact">Contact</a>
-            <a href="https://drive.google.com/file/d/1hVfTe6yi2teIXH5ohWltbn2oaifgufht/view?usp=sharing"><button
-                    class="resume-btn">Resume</button></a>
+            <a href="https://drive.google.com/file/d/1czKnTnUtgz3A5L5Ca0hIy8D2ch_6yY0l/view?usp=sharing"
+                target="_blank">
+                <button class="resume-btn" class="resume" onclick="downloadResume()">Resume</button>
+            </a>
+
         </nav>
     </header>
 
-    <div class="main-section" id:"home">
+    <div class="main-section" id="home">
         <h2>Hi, I'm Mayuri Shinde</h2>
         <p style="margin: 0px 0px;">A Full Stack Developer</p>
         <!-- <p style="font-size: 0.8rem; color:#ddd9d9;margin-top:42px">Passionate About Building Scalable Websites</p> -->
@@ -1091,8 +1083,10 @@
                     applications that solve real-world problems. Outside of coding, I enjoy reading about new
                     tech trends, playing chess, and learning new languages. I always keep a growth mindset and eager
                     to expand my skill set.</p>
-                <a href="https://drive.google.com/file/d/1hVfTe6yi2teIXH5ohWltbn2oaifgufht/view?usp=sharing"><button
-                        class="resume">Resume</button></a>
+                <a href="https://drive.google.com/file/d/1czKnTnUtgz3A5L5Ca0hIy8D2ch_6yY0l/view?usp=sharing"
+                    target="_blank">
+                    <button class="resume-btn resume" onclick="downloadResume()">Resume</button>
+                </a>
 
             </div>
         </div>
@@ -1159,8 +1153,10 @@
                         ✅ Student Data Display: Displays student details and academic progress in an easy-to-view
                         format.</p>
                     <div class="button-container">
-                        <a href="" target="_blank" class="btn github-btn">GitHub</a>
-                        <a href="" target="_blank" class="btn live-btn">Live</a>
+                        <a href="https://github.com/MAYURIRAMNATHSHINDE/StudentManagement" target="_blank"
+                            class="btn github-btn">GitHub</a>
+                        <a href="https://student-management-oz1x.onrender.com/" target="_blank"
+                            class="btn live-btn">Live</a>
                     </div>
                 </div>
 
@@ -1169,7 +1165,8 @@
         </div>
     </section>
 
-    <h2 id="statisctics">Statistics</h2>
+    <h2 id="statisctics" style="margin: 30px auto 20px;">Statistics</h2>
+
     <div class="cal" id="stat">
         <div class="calendar">
 
